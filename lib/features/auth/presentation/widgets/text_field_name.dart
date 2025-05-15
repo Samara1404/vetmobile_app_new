@@ -8,14 +8,14 @@ class TextFieldName extends StatelessWidget {
   final TextInputType keyboardType;
 
   const TextFieldName({
-    Key? key,
+    super.key,
 
     required this.hintText,
     this.obscureText = false,
     this.controller,
     this.validator,
     this.keyboardType = TextInputType.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

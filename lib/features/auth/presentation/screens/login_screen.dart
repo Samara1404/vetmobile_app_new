@@ -10,9 +10,11 @@ import 'package:vetmobile_app_new/features/auth/presentation/widgets/logo.dart';
 import 'package:vetmobile_app_new/features/auth/presentation/widgets/navigated_button.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
+ 
+  // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
 

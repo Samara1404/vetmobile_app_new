@@ -9,14 +9,14 @@ class TextFieldEdit extends StatelessWidget {
   final TextInputType keyboardType;
 
   const TextFieldEdit({
-    Key? key,
+    super.key,
     required this.suffixIcon, 
     required this.hintText, 
     this.obscureText = false,
     this.controller,
     this.validator,
     this.keyboardType = TextInputType.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -47,14 +47,28 @@ class _MenuScreenState extends State<MenuScreen> {
             itemCount: widget.menuItems.length,
             itemBuilder: (context, index) {
               return InkWell(
-                
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => widget.menuItems[index]['screen'],
+                    ),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Image.asset(
+                    widget.menuItems[index]['image'],
+                    fit: BoxFit.contain,
+                  ),
+                ),
               );
             },
           ),
         ],
       ),
-
-  
     );
   }
 }
